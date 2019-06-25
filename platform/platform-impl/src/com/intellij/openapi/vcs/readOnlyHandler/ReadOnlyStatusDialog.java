@@ -189,6 +189,6 @@ public class ReadOnlyStatusDialog extends OptionsDialog {
     }
 
     int size = files.size();
-    return StringUtil.pluralize("this", size) + " " + StringUtil.pluralize((dirsOnly ? "directory" : "file"), size);
+    return StringUtil.pluralise("this", size) + " " + StringUtil.pluralise((dirsOnly ? "directory" : "file"), size);
   }
 }

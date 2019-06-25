@@ -787,7 +787,7 @@ public class StringUtil extends StringUtilRt {
 
   @NotNull
   @Contract(pure = true)
-  public static String pluralize(@NotNull String word) {
+  public static String pluralise(@NotNull String word) {
     String plural = Pluralizer.PLURALIZER.plural(word);
     if (plural != null) return plural;
     if (word.endsWith("s")) return Pluralizer.restoreCase(word, word + "es");
@@ -1084,9 +1084,9 @@ public class StringUtil extends StringUtilRt {
 
   @NotNull
   @Contract(pure = true)
-  public static String pluralize(@NotNull String base, int count) {
+  public static String pluralise(@NotNull String base, int count) {
     if (count == 1) return base;
-    return pluralize(base);
+    return pluralise(base);
   }
 
   public static void repeatSymbol(@NotNull Appendable buffer, char symbol, int times) {

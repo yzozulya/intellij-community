@@ -425,9 +425,9 @@ public abstract class ThreesideTextDiffViewerEx extends ThreesideTextDiffViewer 
     @NotNull
     private String makeCounterWord(int number, @NotNull String word) {
       if (number == 0) {
-        return "No " + StringUtil.pluralize(word);
+        return "No " + StringUtil.pluralise(word);
       }
-      return number + " " + StringUtil.pluralize(word, number);
+      return number + " " + StringUtil.pluralise(word, number);
     }
   }
 

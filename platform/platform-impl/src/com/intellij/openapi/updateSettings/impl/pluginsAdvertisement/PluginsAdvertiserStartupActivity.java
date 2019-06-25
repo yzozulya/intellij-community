@@ -157,7 +157,7 @@ final class PluginsAdvertiserStartupActivity implements StartupActivity, DumbAwa
                                                                            entry -> entry.getKey() + "[" + StringUtil.join(entry.getValue(), ", ") + "]", ", ");
     final int addressedFeaturesNumber = addressedFeatures.keySet().size();
     final int pluginsNumber = ids.size();
-    return StringUtil.pluralize("Plugin", pluginsNumber) + " supporting " + StringUtil.pluralize("feature", addressedFeaturesNumber) +
+    return StringUtil.pluralise("Plugin", pluginsNumber) + " supporting " + StringUtil.pluralise("feature", addressedFeaturesNumber) +
            " (" + addressedFeaturesPresentation + ") " + (pluginsNumber == 1 ? "is" : "are") + " currently " + (plugins.isEmpty() ? "disabled" : "not installed") + ".<br>";
   }
 }

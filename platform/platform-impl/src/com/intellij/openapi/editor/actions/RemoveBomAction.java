@@ -95,7 +95,7 @@ public class RemoveBomAction extends AnAction implements DumbAware {
 
         if (!filesUnableToProcess.isEmpty()) {
           String title = "Was unable to remove BOM in " + filesUnableToProcess.size() +" " +
-                         StringUtil.pluralize("file", filesUnableToProcess.size());
+                         StringUtil.pluralise("file", filesUnableToProcess.size());
           String msg = (filesUnableToProcess.size() == 1 ? "This file has" : "These files have") +
                        " mandatory BOM:<br/>    " + StringUtil.join(filesUnableToProcess, VirtualFile::getName, "<br/>    ");
           Notifications.Bus.notify(new Notification("Failed to remove BOM", title, msg, NotificationType.ERROR));

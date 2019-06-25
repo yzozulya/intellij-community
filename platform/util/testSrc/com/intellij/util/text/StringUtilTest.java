@@ -133,27 +133,27 @@ public class StringUtilTest {
 
   @Test
   public void testPluralize() {
-    assertEquals("values", StringUtil.pluralize("value"));
-    assertEquals("values", StringUtil.pluralize("values"));
-    assertEquals("indices", StringUtil.pluralize("index"));
-    assertEquals("matrices", StringUtil.pluralize("matrix"));
-    assertEquals("fixes", StringUtil.pluralize("fix"));
-    assertEquals("men", StringUtil.pluralize("man"));
-    assertEquals("media", StringUtil.pluralize("medium"));
-    assertEquals("stashes", StringUtil.pluralize("stash"));
-    assertEquals("children", StringUtil.pluralize("child"));
-    assertEquals("leaves", StringUtil.pluralize("leaf"));
-    assertEquals("These", StringUtil.pluralize("This"));
-    assertEquals("cookies", StringUtil.pluralize("cookie"));
-    assertEquals("VaLuES", StringUtil.pluralize("VaLuE"));
-    assertEquals("PLANS", StringUtil.pluralize("PLAN"));
-    assertEquals("stackTraceLineExes", StringUtil.pluralize("stackTraceLineEx"));
-    assertEquals("schemas", StringUtil.pluralize("schema")); // anglicized version
-    assertEquals("PROPERTIES", StringUtil.pluralize("PROPERTY"));
-    assertEquals("THESE", StringUtil.pluralize("THIS"));
-    assertEquals("databases", StringUtil.pluralize("database"));
-    assertEquals("bases", StringUtil.pluralize("base"));
-    assertEquals("bases", StringUtil.pluralize("basis"));
+    assertEquals("values", StringUtil.pluralise("value"));
+    assertEquals("values", StringUtil.pluralise("values"));
+    assertEquals("indices", StringUtil.pluralise("index"));
+    assertEquals("matrices", StringUtil.pluralise("matrix"));
+    assertEquals("fixes", StringUtil.pluralise("fix"));
+    assertEquals("men", StringUtil.pluralise("man"));
+    assertEquals("media", StringUtil.pluralise("medium"));
+    assertEquals("stashes", StringUtil.pluralise("stash"));
+    assertEquals("children", StringUtil.pluralise("child"));
+    assertEquals("leaves", StringUtil.pluralise("leaf"));
+    assertEquals("These", StringUtil.pluralise("This"));
+    assertEquals("cookies", StringUtil.pluralise("cookie"));
+    assertEquals("VaLuES", StringUtil.pluralise("VaLuE"));
+    assertEquals("PLANS", StringUtil.pluralise("PLAN"));
+    assertEquals("stackTraceLineExes", StringUtil.pluralise("stackTraceLineEx"));
+    assertEquals("schemas", StringUtil.pluralise("schema")); // anglicized version
+    assertEquals("PROPERTIES", StringUtil.pluralise("PROPERTY"));
+    assertEquals("THESE", StringUtil.pluralise("THIS"));
+    assertEquals("databases", StringUtil.pluralise("database"));
+    assertEquals("bases", StringUtil.pluralise("base"));
+    assertEquals("bases", StringUtil.pluralise("basis"));
   }
 
   @Test

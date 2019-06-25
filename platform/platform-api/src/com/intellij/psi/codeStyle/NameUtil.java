@@ -247,7 +247,7 @@ public final class NameUtil {
 
     String suggestion = buffer.toString();
     if (isArray) {
-      suggestion = StringUtil.pluralize(suggestion);
+      suggestion = StringUtil.pluralise(suggestion);
       if (upperCaseStyle) {
         suggestion = StringUtil.toUpperCase(suggestion);
       }

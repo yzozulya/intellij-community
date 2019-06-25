@@ -51,8 +51,8 @@ public class NonProjectFileWritingAccessDialog extends DialogWrapper {
 
     int dirs = ContainerUtil.map2Set(nonProjectFiles, VirtualFile::getParent).size();
     setTextAndMnemonicAndListeners(myUnlockDirButton, "I want to edit all files in "
-                                                      + StringUtil.pluralize("this", dirs)
-                                                      + " " + StringUtil.pluralize("directory", dirs), "dir");
+                                                      + StringUtil.pluralise("this", dirs)
+                                                      + " " + StringUtil.pluralise("directory", dirs), "dir");
 
     setTextAndMnemonicAndListeners(myUnlockAllButton, "I want to edit any non-project file in the current session", "any");
 
