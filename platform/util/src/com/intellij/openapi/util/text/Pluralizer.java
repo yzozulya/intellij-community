@@ -223,7 +223,10 @@ class Pluralizer {
       //{"schema", "schemata"},
       {"anathema", "anathemata"},
       // Other irregular rules.
-      {"ox", "oxen"},
+
+      // TODO: new rule for usability study
+      // {"ox", "oxen"},
+
       {"axe", "axes"},
       {"die", "dice"},
       {"yes", "yeses"},

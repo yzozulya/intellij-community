@@ -129,6 +129,9 @@ public class StringUtilTest {
     assertEquals("THIS", StringUtil.unpluralize("THESE"));
     assertEquals("database", StringUtil.unpluralize("databases"));
     assertEquals("basis", StringUtil.unpluralize("bases"));
+
+    // TODO: test for the rule for usability study
+    // assertEquals("ox", StringUtil.unpluralize("oxen"));
   }
 
   @Test
@@ -154,6 +157,9 @@ public class StringUtilTest {
     assertEquals("databases", StringUtil.pluralise("database"));
     assertEquals("bases", StringUtil.pluralise("base"));
     assertEquals("bases", StringUtil.pluralise("basis"));
+
+    // TODO: test for the rule for usability study
+    // assertEquals("oxen", StringUtil.pluralise("ox"));
   }
 
   @Test
