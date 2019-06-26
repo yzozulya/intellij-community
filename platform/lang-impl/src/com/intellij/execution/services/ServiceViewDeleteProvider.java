@@ -38,7 +38,7 @@ class ServiceViewDeleteProvider implements DeleteProvider {
 
     int size = items.size();
     if (Messages.showYesNoDialog(project,
-                                 "Delete " + size + " " + StringUtil.pluralize("item", size) + "?",
+                                 "Delete " + size + " " + StringUtil.pluralized("item", size) + "?",
                                  "Delete",
                                  Messages.getWarningIcon())
         != Messages.YES) {

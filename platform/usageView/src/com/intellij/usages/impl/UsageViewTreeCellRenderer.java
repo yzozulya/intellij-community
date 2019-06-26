@@ -140,7 +140,7 @@ class UsageViewTreeCellRenderer extends ColoredTreeCellRenderer {
 
         int count = node.getRecursiveUsageCount();
         SimpleTextAttributes attributes = patchAttrs(node, ourNumberOfUsagesAttribute);
-        append(FontUtil.spaceAndThinSpace() + StringUtil.pluralise(count + " " + myPresentation.getUsagesWord(), count),
+        append(FontUtil.spaceAndThinSpace() + StringUtil.pluralized(count + " " + myPresentation.getUsagesWord(), count),
                SimpleTextAttributes.GRAYED_ATTRIBUTES.derive(attributes.getStyle(), null, null, null));
       }
       else if (treeNode instanceof UsageNode) {
@@ -229,7 +229,7 @@ class UsageViewTreeCellRenderer extends ColoredTreeCellRenderer {
         }
 
         int count = node.getRecursiveUsageCount();
-        result.append(" (").append(StringUtil.pluralise(count + " " + myPresentation.getUsagesWord(), count)).append(")");
+        result.append(" (").append(StringUtil.pluralized(count + " " + myPresentation.getUsagesWord(), count)).append(")");
       }
       else if (treeNode instanceof UsageNode) {
         UsageNode node = (UsageNode)treeNode;

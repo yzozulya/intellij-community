@@ -3,7 +3,6 @@ package com.jetbrains.changeReminder.changes
 
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.application.ApplicationNamesInfo
-import com.intellij.openapi.util.text.StringUtil.pluralize
 import com.intellij.openapi.vcs.changes.ChangeListManager
 import com.intellij.openapi.vcs.changes.LocalChangeList
 import com.intellij.openapi.vcs.changes.ui.ChangesBrowserNode

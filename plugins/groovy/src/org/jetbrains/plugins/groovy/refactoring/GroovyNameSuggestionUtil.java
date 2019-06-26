@@ -181,7 +181,7 @@ public class GroovyNameSuggestionUtil {
       if (clazz == null) return;
       candidateName = GroovyNamesUtil.fromLowerLetter(clazz.getName());
     }
-    candidateName = StringUtil.pluralize(GroovyNamesUtil.fromLowerLetter(candidateName));
+    candidateName = StringUtil.pluralise(GroovyNamesUtil.fromLowerLetter(candidateName));
     generateCamelNames(possibleNames, validator, candidateName);
 
     ArrayList<String> camelizedName = GroovyNamesUtil.camelizeString(candidateName);
@@ -207,7 +207,7 @@ public class GroovyNameSuggestionUtil {
     }
 
     assert componentName != null;
-    String candidateName = StringUtil.pluralize(GroovyNamesUtil.fromLowerLetter(componentName));
+    String candidateName = StringUtil.pluralise(GroovyNamesUtil.fromLowerLetter(componentName));
     generateCamelNames(possibleNames, validator, candidateName);
 
     ArrayList<String> camelizedName = GroovyNamesUtil.camelizeString(candidateName);

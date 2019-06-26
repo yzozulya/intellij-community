@@ -157,7 +157,7 @@ class GitConflictsView(private val project: Project) : Disposable {
     if (locks.any { it.isLocked }) return
     locks.forEach { it.lock() }
 
-    object : Task.Backgroundable(project, StringUtil.pluralize("Resolving Conflict", conflicts.size), true) {
+    object : Task.Backgroundable(project, StringUtil.pluralized("Resolving Conflict", conflicts.size), true) {
       override fun run(indicator: ProgressIndicator) {
         mergeHandler.acceptOneVersion(conflicts, reversed, takeTheirs)
       }

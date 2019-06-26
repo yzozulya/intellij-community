@@ -22,7 +22,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 import static com.intellij.openapi.util.text.StringUtil.join;
-import static com.intellij.openapi.util.text.StringUtil.pluralize;
+import static com.intellij.openapi.util.text.StringUtil.pluralized;
 
 /**
  * @deprecated Use {@link git4idea.fetch.GitFetchSupport}
@@ -105,7 +105,7 @@ public final class GitFetchResult {
   @NotNull
   public String getAdditionalInfo() {
     if (!myPrunedRefs.isEmpty()) {
-      return "Pruned obsolete remote " + pluralize("reference", myPrunedRefs.size()) + ": " + join(myPrunedRefs, ", ");
+      return "Pruned obsolete remote " + pluralized("reference", myPrunedRefs.size()) + ": " + join(myPrunedRefs, ", ");
     }
     return "";
   }

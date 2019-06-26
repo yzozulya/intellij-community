@@ -91,7 +91,7 @@ public class GotoClassAction extends GotoActionBase implements DumbAware {
 
     final GotoClassModel2 model = new GotoClassModel2(project);
     String pluralKinds = StringUtil.capitalize(
-      StringUtil.join(GotoClassPresentationUpdater.getElementKinds(), s -> StringUtil.pluralize(s), "/"));
+      StringUtil.join(GotoClassPresentationUpdater.getElementKinds(), s -> StringUtil.pluralise(s), "/"));
     String title = IdeBundle.message("go.to.class.toolwindow.title", pluralKinds);
     showNavigationPopup(e, model, new GotoActionCallback<Language>() {
       @Override

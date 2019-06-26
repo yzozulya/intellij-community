@@ -89,7 +89,7 @@ public class IgnoreExternalProjectAction extends ExternalSystemToggleAction {
     boolean selected = super.isSelected(e);
     ProjectSystemId systemId = getSystemId(e);
     final String systemIdName = systemId != null ? systemId.getReadableName() : "external";
-    final String pluralizedProjects = StringUtil.pluralise("project", getProjectNodes(e).size());
+    final String pluralizedProjects = StringUtil.pluralized("project", getProjectNodes(e).size());
     if (selected) {
       setText(e, ExternalSystemBundle.message("action.unignore.external.projects.text", systemIdName, pluralizedProjects));
       setDescription(e, ExternalSystemBundle.message("action.unignore.external.projects.description", systemIdName, pluralizedProjects));

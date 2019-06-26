@@ -16,6 +16,6 @@ final class SubstringConsoleFolding extends ConsoleFolding {
 
   @Override
   public String getPlaceholderText(@NotNull Project project, @NotNull List<String> lines) {
-    return " <" + lines.size() + " internal " + StringUtil.pluralize("call", lines.size()) + ">";
+    return " <" + lines.size() + " internal " + StringUtil.pluralized("call", lines.size()) + ">";
   }
 }

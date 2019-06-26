@@ -668,7 +668,7 @@ public abstract class PluginManagerMain implements Disposable {
         }
         else {
           message += "plugin " +
-                     StringUtil.pluralise("dependency", disabledDependants.size());
+                     StringUtil.pluralized("dependency", disabledDependants.size());
         }
         message += "?";
         result = Messages.showYesNoDialog(XmlStringUtil.wrapInHtml(message), "Dependent Plugins Found", Messages.getQuestionIcon());

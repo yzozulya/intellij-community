@@ -42,7 +42,7 @@ public class MoveMultipleElementsViewDescriptor implements UsageViewDescriptor {
       if (psiElements.length > 0) {
         myProcessedElementsHeader = StringUtil.capitalize(
           RefactoringBundle
-            .message("move.single.element.elements.header", StringUtil.pluralize(UsageViewUtil.getType(psiElements[0])), targetName));
+            .message("move.single.element.elements.header", StringUtil.pluralise(UsageViewUtil.getType(psiElements[0])), targetName));
       }
       myCodeReferencesText = RefactoringBundle.message("references.found.in.code");
     }

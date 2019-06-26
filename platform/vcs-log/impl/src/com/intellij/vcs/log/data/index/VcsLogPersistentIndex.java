@@ -670,7 +670,7 @@ public class VcsLogPersistentIndex implements VcsLogModifiableIndex, Disposable 
 
     @NotNull
     private String formatTime(int time, String name) {
-      return time + " " + StringUtil.pluralize(name, time);
+      return time + " " + StringUtil.pluralized(name, time);
     }
   }
 }

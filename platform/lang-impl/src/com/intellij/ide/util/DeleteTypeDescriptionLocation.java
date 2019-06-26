@@ -56,7 +56,7 @@ public class DeleteTypeDescriptionLocation extends ElementDescriptionLocation {
         if (typeName == null) {
           typeName = LanguageFindUsages.getType(element);
         }
-        return !plural ? typeName : StringUtil.pluralize(typeName);
+        return !plural ? typeName : StringUtil.pluralise(typeName);
       }
       return null;
     }

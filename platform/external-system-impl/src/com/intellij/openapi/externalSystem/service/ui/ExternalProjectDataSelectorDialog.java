@@ -601,8 +601,8 @@ public class ExternalProjectDataSelectorDialog extends DialogWrapper {
       if (deps.size() > MAX_DEPENDENCIES_TO_DESCRIBE || selectedModules.size() > MAX_DEPENDENCIES_TO_DESCRIBE) {
         return String.format(
           "%d disabled %s depend on %d selected %s. Would you like to enable %s too?",
-          deps.size(), StringUtil.pluralise("module", deps.size()),
-          selectedModules.size(), StringUtil.pluralise("module", selectedModules.size()),
+          deps.size(), StringUtil.pluralized("module", deps.size()),
+          selectedModules.size(), StringUtil.pluralized("module", selectedModules.size()),
           deps.size() == 1 ? "it" : "them");
       }
 
@@ -611,8 +611,8 @@ public class ExternalProjectDataSelectorDialog extends DialogWrapper {
       final String listOfDependencies = StringUtil.join(deps, node -> node.getData().getId(), "<br>");
       return String.format(
         "<html>The following %s on which <b>%s</b> %s %s disabled:<br><b>%s</b><br>Would you like to enable %s?</html>",
-        StringUtil.pluralise("module", deps.size()), listOfSelectedModules,
-        StringUtil.pluralise("depend", selectedModules.size()), deps.size() == 1 ? "is" : "are",
+        StringUtil.pluralized("module", deps.size()), listOfSelectedModules,
+        StringUtil.pluralized("depend", selectedModules.size()), deps.size() == 1 ? "is" : "are",
         listOfDependencies, deps.size() == 1 ? "it" : "them");
     }
 
@@ -624,8 +624,8 @@ public class ExternalProjectDataSelectorDialog extends DialogWrapper {
       final String listOfDependencies = StringUtil.join(deps, node -> node.getData().getId(), "<br>");
       return String.format(
         "<html>The following %s <br><b>%s</b><br>%s enabled and %s on selected modules. <br>Would you like to disable %s too?</html>",
-        StringUtil.pluralise("module", deps.size()), listOfDependencies, deps.size() == 1 ? "is" : "are",
-        StringUtil.pluralise("depend", deps.size()),
+        StringUtil.pluralized("module", deps.size()), listOfDependencies, deps.size() == 1 ? "is" : "are",
+        StringUtil.pluralized("depend", deps.size()),
         deps.size() == 1 ? "it" : "them");
     }
   }

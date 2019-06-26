@@ -79,7 +79,7 @@ public class RemoveConfigurationAction extends AnAction {
 
     int size = nodes.size();
     if (Messages.showYesNoDialog(project,
-                                 "Delete " + size + " " + StringUtil.pluralize("configuration", size) + "?",
+                                 "Delete " + size + " " + StringUtil.pluralized("configuration", size) + "?",
                                  ExecutionBundle.message("run.dashboard.remove.configuration.dialog.title"),
                                  Messages.getWarningIcon())
         != Messages.YES) {

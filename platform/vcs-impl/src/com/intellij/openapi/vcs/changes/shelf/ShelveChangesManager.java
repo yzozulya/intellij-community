@@ -901,7 +901,7 @@ public class ShelveChangesManager implements PersistentStateComponent<Element>, 
 
     if (!failedChangeLists.isEmpty()) {
       VcsNotifier.getInstance(myProject).notifyError("Shelf Failed", String
-        .format("Shelving changes for %s [%s] failed", StringUtil.pluralize("changelist", failedChangeLists.size()),
+        .format("Shelving changes for %s [%s] failed", StringUtil.pluralized("changelist", failedChangeLists.size()),
                 StringUtil.join(failedChangeLists, ",")));
     }
     return result;

@@ -529,7 +529,7 @@ public class ShelvedChangesViewManager implements Disposable {
         notification.expire();
         if (!cantRestoreList.isEmpty()) {
           VcsNotifier.getInstance(myProject).notifyMinorWarning("Undo Shelf Deletion", VcsBundle
-            .message("shelve.changes.restore.error", cantRestoreList.size(), StringUtil.pluralize("changelist", cantRestoreList.size())));
+            .message("shelve.changes.restore.error", cantRestoreList.size(), StringUtil.pluralized("changelist", cantRestoreList.size())));
         }
       }
     }
@@ -557,7 +557,7 @@ public class ShelvedChangesViewManager implements Disposable {
       StringBuilder stringBuilder = new StringBuilder();
       String delimiter = "";
       if (fileNum != 0) {
-        stringBuilder.append(fileNum == 1 ? "one" : fileNum).append(StringUtil.pluralize(" file", fileNum));
+        stringBuilder.append(fileNum == 1 ? "one" : fileNum).append(StringUtil.pluralized(" file", fileNum));
         delimiter = " and ";
       }
       if (listNum != 0) {
@@ -566,7 +566,7 @@ public class ShelvedChangesViewManager implements Disposable {
           stringBuilder.append("one shelved changelist [<b>").append(first.DESCRIPTION).append("</b>]");
         }
         else {
-          stringBuilder.append(listNum).append(" shelved ").append(StringUtil.pluralize("changelist", listNum));
+          stringBuilder.append(listNum).append(" shelved ").append(StringUtil.pluralized("changelist", listNum));
         }
       }
       stringBuilder.append(" deleted successfully");

@@ -111,6 +111,6 @@ public class ProjectLoadingErrorsNotifierImpl extends ProjectLoadingErrorsNotifi
       return type.getElementKind() + " " + description.getElementName();
     }
 
-    return descriptions.size() + " " + StringUtil.pluralize(type.getElementKind());
+    return descriptions.size() + " " + StringUtil.pluralise(type.getElementKind());
   }
 }

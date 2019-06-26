@@ -121,7 +121,7 @@ public class HgBranchPopupActions {
       if (name == null) {
         return;
       }
-      new Task.Backgroundable(myProject, "Creating " + StringUtil.pluralize("Branch", myRepositories.size()) + "...") {
+      new Task.Backgroundable(myProject, "Creating " + StringUtil.pluralized("Branch", myRepositories.size()) + "...") {
         @Override
         public void run(@NotNull ProgressIndicator indicator) {
           createNewBranchInCurrentThread(name);
@@ -151,8 +151,8 @@ public class HgBranchPopupActions {
     @NotNull final HgRepository myPreselectedRepo;
 
     HgCloseBranchAction(@NotNull List<HgRepository> repositories, @NotNull HgRepository preselectedRepo) {
-      super("Close " + StringUtil.pluralize("branch", repositories.size()),
-            "Close current " + StringUtil.pluralize("branch", repositories.size()), AllIcons.Actions.Delete);
+      super("Close " + StringUtil.pluralized("branch", repositories.size()),
+            "Close current " + StringUtil.pluralized("branch", repositories.size()), AllIcons.Actions.Delete);
       myRepositories = repositories;
       myPreselectedRepo = preselectedRepo;
     }

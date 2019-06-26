@@ -36,11 +36,11 @@ class DefaultCommitResultHandler(private val committer: AbstractCommitter) : Com
 
     when {
       errorsSize > 0 -> {
-        val title = pluralize(message("message.text.commit.failed.with.error"), errorsSize)
+        val title = pluralized(message("message.text.commit.failed.with.error"), errorsSize)
         notifier.notifyError(title, message)
       }
       warningsSize > 0 -> {
-        val title = pluralize(message("message.text.commit.finished.with.warning"), warningsSize)
+        val title = pluralized(message("message.text.commit.finished.with.warning"), warningsSize)
         notifier.notifyImportantWarning(title, message)
       }
       else -> notifier.notifySuccess(message)
@@ -68,9 +68,9 @@ class DefaultCommitResultHandler(private val committer: AbstractCommitter) : Com
     val failed = committer.failedToCommitChanges.size
     val committed = committer.changes.size - failed
 
-    var fileSummary = "$committed ${pluralize("file", committed)} committed"
+    var fileSummary = "$committed ${pluralized("file", committed)} committed"
     if (failed > 0) {
-      fileSummary += ", $failed ${pluralize("file", failed)} failed to commit"
+      fileSummary += ", $failed ${pluralized("file", failed)} failed to commit"
     }
     return fileSummary
   }

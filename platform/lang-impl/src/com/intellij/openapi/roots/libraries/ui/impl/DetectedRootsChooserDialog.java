@@ -104,8 +104,8 @@ public class DetectedRootsChooserDialog extends DialogWrapper {
 
   private void init(Collection<SuggestedChildRootInfo> suggestedRoots) {
     myDescription = XmlStringUtil.wrapInHtml(ApplicationNamesInfo.getInstance().getFullProductName() +
-                    " just scanned files and detected the following " + StringUtil.pluralize("root", suggestedRoots.size()) + ".<br>" +
-                    "Select items in the tree below or press Cancel to cancel operation.");
+                                             " just scanned files and detected the following " + StringUtil.pluralized("root", suggestedRoots.size()) + ".<br>" +
+                                             "Select items in the tree below or press Cancel to cancel operation.");
     myTreeTable = createTreeTable(suggestedRoots);
     myPane = ScrollPaneFactory.createScrollPane(myTreeTable);
     setTitle("Detected Roots");

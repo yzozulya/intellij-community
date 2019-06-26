@@ -132,7 +132,7 @@ public class TriggerAdditionOrDeletion {
   }
 
   private void notifyAndLogFiles(@NotNull String topic, @NotNull List<FilePath> incorrectFilePath) {
-    String message = "The following " + StringUtil.pluralize("file", incorrectFilePath.size()) + " may be processed incorrectly by VCS.\n" +
+    String message = "The following " + StringUtil.pluralized("file", incorrectFilePath.size()) + " may be processed incorrectly by VCS.\n" +
                      "Please check it manually: " + incorrectFilePath;
     LOG.warn(message);
     VcsNotifier.getInstance(myProject).notifyImportantWarning(topic, message);

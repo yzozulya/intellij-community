@@ -350,9 +350,9 @@ public class ShowAffectedTestsAction extends AnAction {
         int testsCount = tree.getTestCount();
         int classesCount = tree.getTestClassesCount();
         popup.setCaption("Found " + testsCount + " " +
-                         StringUtil.pluralize("Test", testsCount) +
+                         StringUtil.pluralized("Test", testsCount) +
                          " in " + classesCount + " " +
-                         StringUtil.pluralize("Class", classesCount) +
+                         StringUtil.pluralized("Class", classesCount) +
                          " for " + title);
       }
     });

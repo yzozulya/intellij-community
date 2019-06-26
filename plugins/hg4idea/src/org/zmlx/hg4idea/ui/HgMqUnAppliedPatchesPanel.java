@@ -233,7 +233,7 @@ public class HgMqUnAppliedPatchesPanel extends JPanel implements DataProvider, H
 
       if (Messages.showOkCancelDialog(myRepository.getProject(), String
                                         .format("You are going to delete selected %s. Would you like to continue?",
-                                                StringUtil.pluralize("patch", names.size())),
+                                                StringUtil.pluralized("patch", names.size())),
                                       "Delete Confirmation", Messages.getWarningIcon()) == Messages.OK) {
         Runnable deleteTask = () -> {
           ProgressManager.getInstance().getProgressIndicator().setText("Deleting patches...");

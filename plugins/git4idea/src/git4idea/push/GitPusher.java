@@ -39,7 +39,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 
-import static com.intellij.openapi.util.text.StringUtil.pluralize;
+import static com.intellij.openapi.util.text.StringUtil.pluralized;
 import static com.intellij.openapi.vcs.update.ActionInfo.UPDATE;
 import static git4idea.push.GitPushResultNotification.VIEW_FILES_UPDATED_DURING_THE_PUSH;
 import static java.util.Collections.singletonList;
@@ -98,7 +98,7 @@ class GitPusher extends Pusher<GitRepository, GitPushSource, GitPushTarget> {
               commitsNumber = filteredCommitsNumber + " of " + updatedCommitsNumber;
             }
             String actionText = String.format("View %s %s received during the push", commitsNumber,
-                                              pluralize("commit", updatedCommitsNumber));
+                                              pluralized("commit", updatedCommitsNumber));
             notification.addAction(NotificationAction.createSimple(actionText, viewCommits));
             return notification;
           }).buildAndShowNotification();

@@ -237,6 +237,6 @@ public class QuickFixPreviewPanelFactory {
 
   private static void appendTextToLabel(SimpleColoredComponent label,
                                         int problemsCount) {
-    label.append(problemsCount + " " + StringUtil.pluralize("problem", problemsCount) + ":");
+    label.append(problemsCount + " " + StringUtil.pluralized("problem", problemsCount) + ":");
   }
 }

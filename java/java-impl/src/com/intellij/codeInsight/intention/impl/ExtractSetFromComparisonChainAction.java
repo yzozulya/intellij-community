@@ -226,7 +226,7 @@ public class ExtractSetFromComparisonChainAction extends PsiElementBaseIntention
     // Suggestions like OBJECT and AN_OBJECT appear because Object.equals argument type is an Object,
     // such names are rarely appropriate
     LinkedHashSet<String> suggestions =
-      StreamEx.of(info.names).without("OBJECT", "AN_OBJECT").map(StringUtil::pluralize).nonNull().toCollection(LinkedHashSet::new);
+      StreamEx.of(info.names).without("OBJECT", "AN_OBJECT").map(StringUtil::pluralise).nonNull().toCollection(LinkedHashSet::new);
     Pair<String, String> prefixSuffix = comparisons.stream().map(cmp -> cmp.myConstantRepresentation).collect(
       MoreCollectors.pairing(MoreCollectors.commonPrefix(), MoreCollectors.commonSuffix(), Pair::create));
     StreamEx.of(prefixSuffix.first, prefixSuffix.second).flatMap(str -> StreamEx.split(str, "\\W+").limit(3))
@@ -234,7 +234,7 @@ public class ExtractSetFromComparisonChainAction extends PsiElementBaseIntention
       .filter(str -> str.length() >= 3 && StringUtil.isJavaIdentifier(str))
       .flatMap(str -> StreamEx.of(manager.suggestVariableName(VariableKind.STATIC_FINAL_FIELD, str, null, null).names))
       .limit(5)
-      .map(StringUtil::pluralize)
+      .map(StringUtil::pluralise)
       .forEach(suggestions::add);
     if(comparisons.get(0).myType.equalsToText(CommonClassNames.JAVA_LANG_STRING)) {
       suggestions.add("STRINGS");

@@ -91,7 +91,7 @@ public class RemoteRepositoriesConfigurable implements SearchableConfigurable, C
             }
             else {
               final StringBuilder sb = new StringBuilder();
-              sb.append(infos.size()).append(" ").append(StringUtil.pluralize("repository", infos.size())).append(" found");
+              sb.append(infos.size()).append(" ").append(StringUtil.pluralized("repository", infos.size())).append(" found");
               //for (MavenRepositoryInfo info : infos) {
               //  sb.append("\n  ");
               //  sb.append(info.getId()).append(" (").append(info.getName()).append(")").append(": ").append(info.getUrl());

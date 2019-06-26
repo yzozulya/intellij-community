@@ -115,7 +115,7 @@ class GitCheckoutNewBranchOperation extends GitBranchOperation {
     if (checkoutResult.totalSuccess() && deleteResult.totalSuccess()) {
       VcsNotifier.getInstance(myProject).notifySuccess("Rollback successful", String
         .format("Checked out %s and deleted %s on %s %s", stringifyBranchesByRepos(myCurrentHeads), code(myNewBranchName),
-                StringUtil.pluralize("root", repositories.size()), successfulRepositoriesJoined()));
+                StringUtil.pluralized("root", repositories.size()), successfulRepositoriesJoined()));
     }
     else {
       StringBuilder message = new StringBuilder();

@@ -22,7 +22,7 @@ class GotoClassPresentationUpdater : PreloadingActivity() {
     @JvmStatic
     fun getTabTitle(pluralize: Boolean): String {
       val split = getActionTitle().split("/".toRegex()).take(2).toTypedArray()
-      return if (pluralize) StringUtil.pluralize(split[0]) else split[0] + if (split.size > 1) " +" else ""
+      return if (pluralize) StringUtil.pluralise(split[0]) else split[0] + if (split.size > 1) " +" else ""
     }
 
     @JvmStatic

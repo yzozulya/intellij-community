@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
-import static com.intellij.openapi.util.text.StringUtil.pluralize;
+import static com.intellij.openapi.util.text.StringUtil.pluralized;
 import static java.util.stream.Collectors.toList;
 
 public abstract class VcsIntegrationEnabler {
@@ -77,7 +77,7 @@ public abstract class VcsIntegrationEnabler {
   protected abstract boolean initOrNotifyError(@NotNull final VirtualFile projectDir);
 
   protected void notifyAddedRoots(Collection<? extends VirtualFile> roots) {
-    String message = String.format("Added %s %s: %s", myVcs.getName(), pluralize("root", roots.size()), joinRootsPaths(roots));
+    String message = String.format("Added %s %s: %s", myVcs.getName(), pluralized("root", roots.size()), joinRootsPaths(roots));
     VcsNotifier.getInstance(myProject).notifySuccess(message);
   }
 

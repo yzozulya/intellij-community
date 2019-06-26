@@ -10,7 +10,6 @@ import com.intellij.openapi.application.ModalityState
 import com.intellij.openapi.diagnostic.logger
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.text.StringUtil
-import com.intellij.openapi.util.text.StringUtil.pluralize
 import com.intellij.openapi.vcs.AbstractVcsHelper
 import com.intellij.openapi.vcs.VcsNotifier
 import com.intellij.openapi.vcs.changes.*

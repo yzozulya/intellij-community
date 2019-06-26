@@ -156,7 +156,7 @@ class GitUserNameNotDefinedDialog extends DialogWrapper {
     if (myAllRootsAffectedByCommit.size() == myRootsWithUndefinedProps.size()) {
       return "";
     }
-    String text = "Git user.name and user.email properties are not defined in " + StringUtil.pluralize("root", myRootsWithUndefinedProps.size()) + "<br/>";
+    String text = "Git user.name and user.email properties are not defined in " + StringUtil.pluralized("root", myRootsWithUndefinedProps.size()) + "<br/>";
     for (VirtualFile root : myRootsWithUndefinedProps) {
       text += root.getPresentableUrl() + "<br/>";
     }

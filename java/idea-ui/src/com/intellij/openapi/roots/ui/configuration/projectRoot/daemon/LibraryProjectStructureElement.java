@@ -98,7 +98,7 @@ public class LibraryProjectStructureElement extends ProjectStructureElement {
     final String name = StringUtil.escapeXmlEntities(libraryName);
     buffer.append("Library ");
     buffer.append("<a href='http://library/").append(name).append("'>").append(name).append("</a>");
-    buffer.append(" has broken " + rootName + " " + StringUtil.pluralize("path", invalidClasses.size()) + ":");
+    buffer.append(" has broken " + rootName + " " + StringUtil.pluralized("path", invalidClasses.size()) + ":");
     for (String url : invalidClasses) {
       buffer.append("<br>&nbsp;&nbsp;");
       buffer.append(PathUtil.toPresentableUrl(url));
@@ -181,7 +181,7 @@ public class LibraryProjectStructureElement extends ProjectStructureElement {
     private final List<String> myInvalidUrls;
 
     RemoveInvalidRootsQuickFix(Library library, OrderRootType type, List<String> invalidUrls) {
-      super("Remove invalid " + StringUtil.pluralize("root", invalidUrls.size()));
+      super("Remove invalid " + StringUtil.pluralized("root", invalidUrls.size()));
       myLibrary = library;
       myType = type;
       myInvalidUrls = invalidUrls;

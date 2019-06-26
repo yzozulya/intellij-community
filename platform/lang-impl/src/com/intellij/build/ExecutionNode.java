@@ -328,13 +328,13 @@ public class ExecutionNode extends CachingSimpleNode {
       SimpleNode parent = getParent();
       hint += parent == null || parent.getParent() == null ? (isRunning() ? "  " : " with ") : " ";
       if (errors > 0) {
-        hint += (errors + " " + StringUtil.pluralize("error", errors));
+        hint += (errors + " " + StringUtil.pluralized("error", errors));
         if (warnings > 0) {
           hint += ", ";
         }
       }
       if (warnings > 0) {
-        hint += (warnings + " " + StringUtil.pluralize("warning", warnings));
+        hint += (warnings + " " + StringUtil.pluralized("warning", warnings));
       }
     }
     return hint;

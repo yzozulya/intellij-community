@@ -427,7 +427,7 @@ public abstract class ThreesideTextDiffViewerEx extends ThreesideTextDiffViewer 
       if (number == 0) {
         return "No " + StringUtil.pluralise(word);
       }
-      return number + " " + StringUtil.pluralise(word, number);
+      return number + " " + StringUtil.pluralized(word, number);
     }
   }
 

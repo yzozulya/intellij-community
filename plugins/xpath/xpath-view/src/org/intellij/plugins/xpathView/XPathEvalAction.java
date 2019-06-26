@@ -235,7 +235,7 @@ public class XPathEvalAction extends XPathAction {
                         showUsageView(editor, xpath, contextNode, list);
                     }
                     if (!cfg.SHOW_USAGE_VIEW && !cfg.HIGHLIGHT_RESULTS) {
-                        final String s = StringUtil.pluralize("match", list.size());
+                        final String s = StringUtil.pluralized("match", list.size());
                         Messages.showInfoMessage(project, "Expression produced " + list.size() + " " + s, "XPath Result");
                     }
                 } else {
@@ -388,7 +388,7 @@ public class XPathEvalAction extends XPathAction {
 
         SwingUtilities.invokeLater(() -> {
             final StatusBar statusBar = WindowManager.getInstance().getStatusBar(editor.getProject());
-            final String s = StringUtil.pluralize("match", list.size());
+            final String s = StringUtil.pluralized("match", list.size());
             statusBar.setInfo(list.size() + " XPath " + s + " found (press Escape to remove the highlighting)");
         });
     }

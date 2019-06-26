@@ -83,7 +83,7 @@ public class HgPusher extends Pusher<HgRepository, HgPushSource, HgTarget> {
     if (result.getExitValue() == PUSH_SUCCEEDED_EXIT_VALUE) {
       int commitsNum = getNumberOfPushedCommits(result);
       String successTitle = "Pushed successfully";
-      String successDescription = String.format("Pushed %d %s [%s]", commitsNum, StringUtil.pluralize("commit", commitsNum),
+      String successDescription = String.format("Pushed %d %s [%s]", commitsNum, StringUtil.pluralized("commit", commitsNum),
                                                 repo.getPresentableName());
       VcsNotifier.getInstance(project).notifySuccess(successTitle, successDescription);
     }

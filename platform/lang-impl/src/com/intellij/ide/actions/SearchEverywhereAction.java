@@ -2367,7 +2367,7 @@ public class SearchEverywhereAction extends AnAction implements CustomComponentA
 
     TitleIndex() {
       String gotoClass = KeymapUtil.getFirstKeyboardShortcutText(ActionManager.getInstance().getAction("GotoClass"));
-      String classesStr = StringUtil.capitalize(StringUtil.join(GotoClassPresentationUpdater.getElementKinds(), StringUtil::pluralize, "/"));
+      String classesStr = StringUtil.capitalize(StringUtil.join(GotoClassPresentationUpdater.getElementKinds(), StringUtil::pluralise, "/"));
       gotoClassTitle = StringUtil.isEmpty(gotoClass) ? classesStr : classesStr + " (" + gotoClass + ")";
       String gotoFile = KeymapUtil.getFirstKeyboardShortcutText(ActionManager.getInstance().getAction("GotoFile"));
       gotoFileTitle = StringUtil.isEmpty(gotoFile) ? "Files" : "Files (" + gotoFile + ")";

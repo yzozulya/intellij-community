@@ -422,11 +422,11 @@ public abstract class AbstractCommonUpdateAction extends AbstractVcsAction imple
       NotificationType type;
       if (someSessionWasCancelled) {
         title = "Project Partially Updated";
-        content = allFiles + " " + pluralize("file", allFiles) + " updated";
+        content = allFiles + " " + pluralized("file", allFiles) + " updated";
         type = NotificationType.WARNING;
       }
       else {
-        title = allFiles + " " + pluralize("File", allFiles) + " Updated";
+        title = allFiles + " " + pluralized("File", allFiles) + " Updated";
         content = notNullize(prepareScopeUpdatedText(tree));
         type = NotificationType.INFORMATION;
       }

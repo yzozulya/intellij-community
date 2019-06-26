@@ -2,7 +2,6 @@
 package com.intellij.openapi.vcs.actions
 
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.util.text.StringUtil.pluralize
 import com.intellij.openapi.vcs.AbstractVcs
 import com.intellij.openapi.vcs.FilePath
 import com.intellij.openapi.vcs.FileStatus

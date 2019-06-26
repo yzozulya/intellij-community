@@ -367,7 +367,7 @@ public class RevisionsList {
         if (affected.first.size() < affected.second) title += "...";
       }
 
-      String filesCount = StringUtil.pluralize(LocalHistoryBundle.message("revisions.table.filesCount", affected.second), affected.second);
+      String filesCount = StringUtil.pluralized(LocalHistoryBundle.message("revisions.table.filesCount", affected.second), affected.second);
 
       Pair<String, Color> label = null;
       if (!item.labels.isEmpty()) {

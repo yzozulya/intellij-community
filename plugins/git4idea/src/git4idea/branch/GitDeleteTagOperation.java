@@ -91,7 +91,7 @@ class GitDeleteTagOperation extends GitBranchOperation {
     }
 
     if (remotes > 0) {
-      String text = "Delete on " + StringUtil.pluralize("Remote", remotes);
+      String text = "Delete on " + StringUtil.pluralized("Remote", remotes);
       notification.addAction(NotificationAction.createSimple(text, () -> pushRemotesInBackground()));
     }
     myNotifier.notify(notification);

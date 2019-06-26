@@ -255,7 +255,7 @@ public class CommitPresentationUtil {
     }
     if (branches.isEmpty()) return "Not in any branch";
 
-    String head = "In " + branches.size() + StringUtil.pluralize(" branch", branches.size()) + ": ";
+    String head = "In " + branches.size() + StringUtil.pluralized(" branch", branches.size()) + ": ";
 
     if (expanded) {
       return head +

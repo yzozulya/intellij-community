@@ -19,7 +19,6 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.DumbAwareAction
-import com.intellij.openapi.util.text.StringUtil.pluralize
 import com.intellij.util.containers.ContainerUtil
 import com.intellij.vcs.log.VcsLogDataKeys
 import com.intellij.vcs.log.util.VcsLogUtil.MAX_SELECTED_COMMITS

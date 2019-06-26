@@ -291,7 +291,7 @@ public abstract class BaseLibrariesConfigurable extends BaseStructureConfigurabl
                 String type = types.get(i);
                 Collection<ProjectStructureElementUsage> usagesOfType = containerType2Usage.get(type);
                 if (usagesOfType.size() > 1) {
-                  sb.append(usagesOfType.size()).append(" ").append(StringUtil.decapitalize(StringUtil.pluralize(type)));
+                  sb.append(usagesOfType.size()).append(" ").append(StringUtil.decapitalize(StringUtil.pluralise(type)));
                 }
                 else {
                   sb.append(StringUtil.decapitalize(usagesOfType.iterator().next().getContainingElement().getPresentableText()));

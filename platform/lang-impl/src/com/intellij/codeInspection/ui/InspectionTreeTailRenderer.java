@@ -71,7 +71,7 @@ public abstract class InspectionTreeTailRenderer {
       String name = myPluralizedSeverityNames.get(severity);
       if (name == null) {
         final String lowerCaseName = StringUtil.toLowerCase(level.getName());
-        name = SeverityRegistrar.isDefaultSeverity(severity) ? StringUtil.pluralize(lowerCaseName) : lowerCaseName;
+        name = SeverityRegistrar.isDefaultSeverity(severity) ? StringUtil.pluralise(lowerCaseName) : lowerCaseName;
         myPluralizedSeverityNames.put(severity, name);
       }
       return name;

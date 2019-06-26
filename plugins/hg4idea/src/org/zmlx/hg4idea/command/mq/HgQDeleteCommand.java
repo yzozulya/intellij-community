@@ -40,7 +40,7 @@ public class HgQDeleteCommand {
     if (HgErrorUtil.hasErrorsInCommandExecution(result)) {
       new HgCommandResultNotifier(project)
         .notifyError(result, "QDelete command failed",
-                     "Could not delete selected " + StringUtil.pluralize("patch", patchNames.size()));
+                     "Could not delete selected " + StringUtil.pluralized("patch", patchNames.size()));
     }
     myRepository.update();
   }

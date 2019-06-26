@@ -351,7 +351,7 @@ public class JavaCodeStyleManagerImpl extends JavaCodeStyleManager {
       }
       String name = map.nameByType(longTypeName);
       if (name != null && isIdentifier(name)) {
-        return Collections.singletonList(type instanceof PsiArrayType ? StringUtil.pluralize(name) : name);
+        return Collections.singletonList(type instanceof PsiArrayType ? StringUtil.pluralise(name) : name);
       }
     }
     return null;
@@ -376,7 +376,7 @@ public class JavaCodeStyleManagerImpl extends JavaCodeStyleManager {
     if (typeName == null) return Collections.emptyList();
 
     typeName = normalizeTypeName(typeName);
-    return Collections.singletonList(type instanceof PsiArrayType ? StringUtil.pluralize(typeName) : typeName);
+    return Collections.singletonList(type instanceof PsiArrayType ? StringUtil.pluralise(typeName) : typeName);
   }
 
   @Nullable
@@ -427,7 +427,7 @@ public class JavaCodeStyleManagerImpl extends JavaCodeStyleManager {
     }
     String typeName = normalizeTypeName(getTypeName(componentType));
     if (typeName != null) {
-      suggestions.add(StringUtil.pluralize(typeName));
+      suggestions.add(StringUtil.pluralise(typeName));
     }
   }
 
@@ -565,7 +565,7 @@ public class JavaCodeStyleManagerImpl extends JavaCodeStyleManager {
   private static String suggestVariableNameFromLiterals(@NotNull PsiExpression expr) {
     String text = findLiteralText(expr);
     if (text == null) return null;
-    return expr.getType() instanceof PsiArrayType ? StringUtil.pluralize(text) : text;
+    return expr.getType() instanceof PsiArrayType ? StringUtil.pluralise(text) : text;
   }
 
   private static boolean isNameSupplier(String text) {

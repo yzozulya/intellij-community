@@ -155,7 +155,7 @@ class GitPushResultNotification extends Notification {
     switch (result.getType()) {
       case SUCCESS:
         int commitNum = result.getNumberOfPushedCommits();
-        String commits = StringUtil.pluralize("commit", commitNum);
+        String commits = StringUtil.pluralized("commit", commitNum);
         description = String.format("pushed %d %s to %s", commitNum, commits, targetBranch);
         if (tagDescription != null) {
           description += ", and " + tagDescription;

@@ -15,7 +15,6 @@
  */
 package git4idea.branch;
 
-import com.google.common.collect.Maps;
 import com.intellij.dvcs.DvcsUtil;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.diagnostic.Logger;
@@ -43,7 +42,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
-import static com.intellij.openapi.util.text.StringUtil.pluralize;
+import static com.intellij.openapi.util.text.StringUtil.pluralized;
 import static com.intellij.util.ObjectUtils.chooseNotNull;
 import static git4idea.GitUtil.getRepositoryManager;
 import static java.util.stream.Collectors.toList;
@@ -238,7 +237,7 @@ abstract class GitBranchOperation {
 
   @NotNull
   protected String repositories() {
-    return pluralize("repository", getSuccessfulRepositories().size());
+    return pluralized("repository", getSuccessfulRepositories().size());
   }
 
   /**

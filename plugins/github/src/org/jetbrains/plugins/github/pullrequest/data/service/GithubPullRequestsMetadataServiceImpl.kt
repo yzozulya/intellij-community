@@ -263,7 +263,7 @@ class GithubPullRequestsMetadataServiceImpl internal constructor(private val pro
     return handler@{ delta, error ->
       if (error != null) {
         if (!GithubAsyncUtil.isCancellation(error))
-          GithubNotifications.showError(project, "Failed to adjust list of ${StringUtil.pluralize(entityName)}", error)
+          GithubNotifications.showError(project, "Failed to adjust list of ${StringUtil.pluralise(entityName)}", error)
         return@handler
       }
       if (delta == null || delta.isEmpty) {
@@ -271,14 +271,14 @@ class GithubPullRequestsMetadataServiceImpl internal constructor(private val pro
       }
 
       if (!busyStateTracker.acquire(pullRequest)) return@handler
-      progressManager.run(object : Task.Backgroundable(project, "Adjusting List of ${StringUtil.pluralize(entityName).capitalize()}...",
+      progressManager.run(object : Task.Backgroundable(project, "Adjusting List of ${StringUtil.pluralise(entityName).capitalize()}...",
                                                        true) {
         override fun run(indicator: ProgressIndicator) {
           adjuster(delta, indicator)
         }
 
         override fun onThrowable(error: Throwable) {
-          GithubNotifications.showError(project, "Failed to adjust list of ${StringUtil.pluralize(entityName)}", error)
+          GithubNotifications.showError(project, "Failed to adjust list of ${StringUtil.pluralise(entityName)}", error)
         }
 
         override fun onFinished() {

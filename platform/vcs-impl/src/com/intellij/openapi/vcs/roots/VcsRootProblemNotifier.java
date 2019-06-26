@@ -32,7 +32,7 @@ import java.util.Set;
 
 import static com.intellij.openapi.util.io.FileUtil.toSystemDependentName;
 import static com.intellij.openapi.util.text.StringUtil.escapeXmlEntities;
-import static com.intellij.openapi.util.text.StringUtil.pluralize;
+import static com.intellij.openapi.util.text.StringUtil.pluralized;
 import static com.intellij.openapi.vcs.VcsDirectoryMapping.PROJECT_CONSTANT;
 import static com.intellij.openapi.vcs.VcsRootError.Type.UNREGISTERED_ROOT;
 import static com.intellij.util.ObjectUtils.notNull;
@@ -245,11 +245,11 @@ public class VcsRootProblemNotifier {
                                   boolean rootsAlreadyAdded) {
     String title;
     if (unregisteredRoots.isEmpty()) {
-      title = "Invalid VCS root " + pluralize("mapping", invalidRoots.size());
+      title = "Invalid VCS root " + pluralized("mapping", invalidRoots.size());
     }
     else if (invalidRoots.isEmpty()) {
       String vcs = getVcsName(unregisteredRoots);
-      String repository = pluralize("Repository", unregisteredRoots.size());
+      String repository = pluralized("Repository", unregisteredRoots.size());
       title = rootsAlreadyAdded ? String.format("%s Integration Enabled", vcs) : String.format("%s %s Found", vcs, repository);
     }
     else {

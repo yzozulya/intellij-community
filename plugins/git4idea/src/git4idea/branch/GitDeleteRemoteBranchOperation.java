@@ -180,7 +180,7 @@ class GitDeleteRemoteBranchOperation extends GitBranchOperation {
   private void notifySuccessfulDeletion(@NotNull String remoteBranchName, @NotNull Collection<String> localBranches) {
     String message = "";
     if (!localBranches.isEmpty()) {
-      message = "Also deleted local " + StringUtil.pluralize("branch", localBranches.size()) + ": " + StringUtil.join(localBranches, ", ");
+      message = "Also deleted local " + StringUtil.pluralized("branch", localBranches.size()) + ": " + StringUtil.join(localBranches, ", ");
     }
     VcsNotifier.getInstance(myProject).notifySuccess("Deleted remote branch " + remoteBranchName,
                                                      message);

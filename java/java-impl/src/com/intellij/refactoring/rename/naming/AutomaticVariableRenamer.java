@@ -166,7 +166,7 @@ public class AutomaticVariableRenamer extends AutomaticRenamer {
     final JavaCodeStyleManager codeStyleManager = JavaCodeStyleManager.getInstance(psiVariable.getProject());
     final String variableName =
       codeStyleManager.propertyNameToVariableName(canonicalName, codeStyleManager.getVariableKind((PsiVariable)psiVariable));
-    if (myToUnpluralize.contains(psiVariable)) return StringUtil.pluralize(variableName);
+    if (myToUnpluralize.contains(psiVariable)) return StringUtil.pluralise(variableName);
     return variableName;
   }
 }

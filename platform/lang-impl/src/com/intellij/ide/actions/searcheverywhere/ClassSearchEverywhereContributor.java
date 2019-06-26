@@ -53,7 +53,7 @@ public class ClassSearchEverywhereContributor extends AbstractGotoSEContributor 
   public String getFullGroupName() {
     String[] split = GotoClassPresentationUpdater.getActionTitle().split("/");
     return Arrays.stream(split)
-      .map(StringUtil::pluralize)
+      .map(StringUtil::pluralise)
       .collect(Collectors.joining("/"));
   }
 

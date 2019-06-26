@@ -380,7 +380,7 @@ public class ContentRootDataService extends AbstractProjectDataService<ContentRo
     int extraReportsCount = reportsCount - 1;
     if (extraReportsCount > 0) {
       notificationMessage += "<br>Also " + extraReportsCount + " more "
-                             + StringUtil.pluralise("path", extraReportsCount)
+                             + StringUtil.pluralized("path", extraReportsCount)
                              + " " + (extraReportsCount == 1 ? "was" : "were") +
                              " deduplicated. See idea log for details";
     }

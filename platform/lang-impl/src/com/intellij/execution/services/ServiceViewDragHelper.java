@@ -223,7 +223,7 @@ class ServiceViewDragHelper {
         c.append(getDisplayName(presentation));
       }
       else {
-        String text = size + StringUtil.pluralize(" item", size);
+        String text = size + StringUtil.pluralized(" item", size);
         c.append(text);
       }
 
