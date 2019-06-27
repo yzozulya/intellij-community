@@ -12,25 +12,6 @@
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>pluralis</find>
-      <find>pluralize</find>
-      <find>oxen</find>
-    </findStrings>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/platform/util/src/com/intellij/openapi/util/NonRelatedFile.java" />
-        <option value="$PROJECT_DIR$/platform/util/src/com/intellij/openapi/util/text/StringUtil.java" />
-        <option value="$PROJECT_DIR$/platform/util/src/com/intellij/openapi/util/_NonRelatedFile.java" />
-        <option value="$PROJECT_DIR$/platform/util/testSrc/com/intellij/util/text/StringUtilTest.java" />
-        <option value="$PROJECT_DIR$/platform/util/src/com/intellij/openapi/util/text/Pluralizer.java" />
-        <option value="$PROJECT_DIR$/scenario.txt" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="7" />
     <option name="y" value="27" />
