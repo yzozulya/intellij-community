@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55ce212b-91b0-4b89-9399-54031725b69a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/util/src/com/intellij/openapi/util/_NonRelatedFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/platform/util/src/com/intellij/openapi/util/_NonRelatedFile.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +88,7 @@
       <workItem from="1561559258267" duration="2696000" />
       <workItem from="1561633275098" duration="274000" />
       <workItem from="1561633636841" duration="63000" />
+      <workItem from="1561646764882" duration="1170000" />
     </task>
     <task id="LOCAL-00001" summary="Updated scenario after test run">
       <created>1561554861729</created>
@@ -155,17 +157,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="renaming on behalf of me" />
-    <MESSAGE value="Updated scenario after test run" />
-    <MESSAGE value="bob &lt;bob@example.com&gt;" />
-    <MESSAGE value="refactor method" />
-    <MESSAGE value="uncomment" />
-    <option name="LAST_COMMIT_MESSAGE" value="uncomment" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
